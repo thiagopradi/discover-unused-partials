@@ -60,7 +60,7 @@ module DiscoverUnusedPartials
         used, dynamic = process_partials(files)
         break if level > 1 && used.size == tree[level-1][:used].size
         tree[level] = {
-          used: used,
+          :used => used,
         }
         if level == 1
           top_dynamic = dynamic
